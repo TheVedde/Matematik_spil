@@ -16,50 +16,12 @@ namespace Matematik_spil
         static void Main(string[] args)
         {
             Question question = new Question();
+            Discipline discipline = new Discipline();
+
             _isRunning = true;
 
-            question.PrintDiscipline();
-            while (_isRunning)
-            {
-                question.DifficultySetting();
-                switch (question.discipline)
-                {
-                    case "quit":
-                        _isRunning = false;
-
-                        break;
-
-                    case ("addition"):
-                        difficultyCheck(question.difficulty);
-                        Console.WriteLine("what is: " + x + " + " + y + "?");
-                        int trial = Convert.ToInt32(Console.ReadLine());
-                        int answer = x + y;
-                        if (trial == answer)
-                        {
-                            Console.WriteLine("That is correct");
-                        }
-                        else Console.WriteLine("That is wrong.");
-                        break;
-
-                    case ("division"):
-                        difficultyCheck(question.difficulty);
-                        break;
-
-                    case ("multiplication"):
-                        difficultyCheck(question.difficulty);
-                        break;
-
-                    case ("subtraction"):
-                        difficultyCheck(question.difficulty);
-                        break;
-
-                    default:
-                        Console.WriteLine("That is not an available input.");
-                        break;          
-                }
-
-                Console.ReadKey();
-            }
+            discipline.PrintDiscipline();
+           
 
         }
         static void difficultyCheck(int difficulty)

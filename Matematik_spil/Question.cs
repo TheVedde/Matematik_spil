@@ -9,14 +9,35 @@ namespace Matematik_spil
     class Question
     {
         List<int> Difficulty = new List<int> {1, 2, 3, 4};
+        Discipline discipline = new Discipline();
 
 
-        public void PrintDiscipline()
+
+        public void Test()
         {
-            Console.WriteLine("what kind of discipline would you like?\n");
-            Console.WriteLine("There is addition, division, multiplication and subtraction.");
-             discipline = Console.ReadLine();
+            Console.WriteLine("what is? ");
+        
+            if(Answer == true)
+            {
+                Console.WriteLine("That is correct");
+                NextQuestion();
+            }
 
+            else { 
+                Console.WriteLine("That is not correct \n");
+                Console.WriteLine("You have lost.");
+                EndGame();
+            }
+        }
+
+        private void EndGame()
+        {
+            throw new NotImplementedException();
+        }
+
+        private void NextQuestion()
+        {
+            throw new NotImplementedException();
         }
 
         public void DifficultySetting()
@@ -31,6 +52,7 @@ namespace Matematik_spil
         }
 
         public int difficulty;
-        public string discipline;
+
+        public bool Answer { get; private set; }
     }
 }
