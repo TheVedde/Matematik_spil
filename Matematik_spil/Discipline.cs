@@ -7,20 +7,28 @@ using System.Threading.Tasks;
 namespace Matematik_spil
 {
 
-    enum Disciplines {Addition, Multiplication, Division, Subtraction };
+    public enum Disciplines {Addition, Multiplication, Division, Subtraction };
    
-
+    
     class Discipline
     {
-
+        
         public void PrintDiscipline()
         {
             Console.WriteLine("what kind of discipline would you like?\n");
             Console.WriteLine("There is addition, division, multiplication and subtraction.");
-            discipline = Console.ReadLine();
- 
+
+            while (!Enum.TryParse<Disciplines>(Console.ReadLine(), out discipline))
+            {
+                Console.WriteLine("WRONG!!!");
+            }
+
+            
         }
 
-        public string discipline;
+
+
+        public Disciplines discipline;
+       
     }
 }
