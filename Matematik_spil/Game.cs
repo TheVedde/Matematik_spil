@@ -71,7 +71,6 @@ namespace Matematik_spil
             _tempDiscipline = classDiscipline.PrintDiscipline();
             _tempOperator = classDiscipline.DisciplineOperation();
             _tempdifficulty = validator.DifficultySetting();
-       //     difficultyCheck(_tempdifficulty);
         }
 
         public void EndGame()

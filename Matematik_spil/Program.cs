@@ -8,12 +8,8 @@ namespace Matematik_spil
 {
     class Program
     {
-    
-        private static bool _isRunning;
         static void Main(string[] args)
         {
-            _isRunning = true;
-
             Game.Instance.Initialize();
             Game.Instance.GameLoop();
 
