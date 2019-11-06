@@ -14,14 +14,12 @@ namespace Matematik_spil
         {
             Question question = new Question();
             Discipline discipline = new Discipline();
-
-
+            Validator validator = new Validator();
+            Gamelogic gamelogic = new Gamelogic();
             _isRunning = true;
 
-            discipline.PrintDiscipline();
-            question.DifficultySetting();
-            question.WriteQuestion();
-           
+            Game.Instance.Initialize();
+            gamelogic.GameLoop();
 
         }
         
