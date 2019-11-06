@@ -12,14 +12,10 @@ namespace Matematik_spil
         private static bool _isRunning;
         static void Main(string[] args)
         {
-            Question question = new Question();
-            Discipline discipline = new Discipline();
-            Validator validator = new Validator();
-            Gamelogic gamelogic = new Gamelogic();
             _isRunning = true;
 
             Game.Instance.Initialize();
-            gamelogic.GameLoop();
+            Game.Instance.GameLoop();
 
         }
         

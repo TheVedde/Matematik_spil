@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Matematik_spil
 {
 
-    public enum Disciplines {Addition, Multiplication, Division, Subtraction };
+    public enum Disciplines {addition, multiplication, division, subtraction };
     
 
     class Discipline
@@ -19,7 +19,7 @@ namespace Matematik_spil
             Console.WriteLine("what kind of discipline would you like?\n");
             Console.WriteLine("There is addition, division, multiplication and subtraction.");
 
-            while (!Enum.TryParse<Disciplines>(Console.ReadLine(), out discipline))
+            while (!Enum.TryParse<Disciplines>(Console.ReadLine().ToLower(), out discipline))
             {
                 Console.WriteLine("That is not a Discipline");
             }
@@ -30,17 +30,17 @@ namespace Matematik_spil
         {
             switch (discipline)
             {
-                case Disciplines.Addition:
+                case Disciplines.addition:
                     Operation = "+";
                     break;
-                case Disciplines.Division:
+                case Disciplines.division:
                     Operation = "/";
                     break;
 
-                case Disciplines.Multiplication:
+                case Disciplines.multiplication:
                     Operation = "*";
                     break;
-                case Disciplines.Subtraction:
+                case Disciplines.subtraction:
                     Operation = "-";
                     break;
             }
